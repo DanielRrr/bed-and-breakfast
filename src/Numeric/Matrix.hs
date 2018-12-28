@@ -35,30 +35,7 @@
 --      All matrix operations will work as expected, though
 --      finding the inverse of a matrix isa tad less numerically
 --      stable than with a @Double@ matrix.
-module Numeric.Matrix (
-
-    Matrix,
-
-    MatrixElement (..),
-
-    -- * Matrix property and utility functions.
-    (<|>),
-    (<->),
-    scale,
-
-    -- ** Matrix properties
-    isUnit,
-    isZero,
-    isDiagonal,
-    isEmpty,
-    isSquare,
-
-    -- ** Conversions
-    toDoubleMatrix,
-    toComplexMatrix,
-    toRationalMatrix
-    
-) where
+module Numeric.Matrix where
 
 
 import Control.Applicative ((<$>))
