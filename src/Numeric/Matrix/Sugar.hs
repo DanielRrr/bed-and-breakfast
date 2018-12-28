@@ -1,8 +1,6 @@
 {-# LANGUAGE Haskell2010, TemplateHaskell #-}
 
-module Numeric.Matrix.Sugar (
-        iMatrix, dMatrix
-    ) where
+module Numeric.Matrix.Sugar where
 
 import Numeric.Matrix
 import Language.Haskell.TH
@@ -14,13 +12,15 @@ import Data.Ratio
 
 type ReadM a = String -> Matrix a
 
+{-
 iMatrix = QuasiQuoter
-            (quoter (read :: ReadM Integer))
+            (quoter (Numeric.Matrix.read :: ReadM Integer))
             undefined undefined undefined
 
 dMatrix = QuasiQuoter
-            (quoter (read :: ReadM Double))
+            (quoter (Numeric.Matrix.read :: ReadM Double))
             undefined undefined undefined
+-}
 
 quoter :: (Data e, MatrixElement e)
        => (String -> Matrix e) -> String -> Q Exp

@@ -37,7 +37,6 @@
 --      stable than with a @Double@ matrix.
 module Numeric.Matrix where
 
-
 import Control.Applicative ((<$>))
 import Control.DeepSeq
 import Control.Monad
